@@ -29,4 +29,4 @@ active [N] proctype proc()
 }
 
 // ltl mutex { [] !(pc[0] == cs && pc[1] == cs) }
-// ltl lofree { [] ((pc[0] == ws) -> (<> (pc[0] == cs))) }
+ltl lofree { [] ((pc[0] == ws) -> (<> (pc[0] == cs))) }
