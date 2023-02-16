@@ -24,8 +24,9 @@ active [N] proctype proc()
         locked = false
     }
     :: cnt == 0 ->
-        cnt != 0
+        break
     od
+    assert(cnt == 0)
 }
 
 // ltl mutex { [] !(pc[0] == cs && pc[1] == cs) }
