@@ -1,7 +1,8 @@
 #define N	13	/* number of processes */
 
-mtype = {ss, ws, cs, fs}
-mtype pc[N] = ss
+mtype = {ss, ws, cs, fs};
+mtype pc[N] = ss;
+mtype pk = ss;
 bool locked = false;
 int cnt = N;
 
@@ -10,24 +11,29 @@ active [N] proctype proc()
     do
 	:: atomic {
         pc[_pid] == ss ->
-        pc[_pid] = ws
+        pc[_pid] = ws;
     }
     :: atomic {
         pc[_pid] == ws && locked == false ->
-        pc[_pid] = cs
-        locked = true
+        pc[_pid] = cs;
+        locked = true;
     }
     :: atomic {
         pc[_pid] == cs ->
-        pc[_pid] = fs
-        cnt--
-        locked = false
+        pc[_pid] = fs;
+        cnt--;
+        locked = false;
     }
     :: cnt == 0 ->
-        break
+        pk = fs;
+        break;
     od
-    assert(cnt == 0)
+    assert(cnt == 0);
 }
 
 // ltl mutex { [] !(pc[0] == cs && pc[1] == cs) }
-ltl lofree { [] ((pc[1] == ws) -> (<> (pc[1] == cs))) }
+// ltl lofree { [] ((pc[1] == ws) -> (<> (pc[1] == cs))) }
+
+//　spins -o3 tas.pml
+// prom2lts-seq --por --ltl='[] ((pc\[0\] == "ws") -> (<> (pc\[0\] == "cs")))' tas.pml.spins
+// prom2lts-mc --strategy=cndfs --threads=2 --ltl='[] ((pc\[0\] == "ws") -> (<> (pc\[0\] == "cs")))' tas.pml.spins

@@ -1,10 +1,10 @@
 #define N   9	/* number of processes */
 
-mtype = {rs, ws, cs, fs}
-mtype pc[N] = rs
-int place[N] = 0
-bool array[N] = false
-int next = 0
+mtype = {rs, ws, cs, fs};
+mtype pc[N] = rs;
+int place[N] = 0;
+bool array[N] = false;
+int next = 0;
 int cnt = N;
 
 proctype proc(int i)
@@ -12,33 +12,36 @@ proctype proc(int i)
     do
 	:: atomic {
         pc[i] == rs ->
-        pc[i] = ws
-        place[i] = next
-        next = (next + 1) % N
+        pc[i] = ws;
+        place[i] = next;
+        next = (next + 1) % N;
     }
     :: atomic {
         pc[i] == ws && array[place[i]] == true ->
-        pc[i] = cs
+        pc[i] = cs;
     }
     :: atomic {
         pc[i] == cs ->
-        pc[i] = fs
-        array[place[i]] = false
-        array[(place[i] + 1) % N] = true
+        pc[i] = fs;
+        array[place[i]] = false;
+        array[(place[i] + 1) % N] = true;
         cnt--;
     }
     :: cnt == 0 ->
-        break
+        break;
     od
-    assert(cnt == 0)
+    assert(cnt == 0);
 }
 
 init {
-    int i = 0
-    array[0] = true
+    int i = 0;
+    array[0] = true;
     do
-    :: i < N -> proc(i); i++
-    :: else -> break
+    :: i < N ->
+        run proc(i);
+        i++;
+    :: else ->
+        break;
     od
 }
 

@@ -4,3 +4,5 @@ spin
 pan
 *.c
 *.o
+*.spins
+*.spins.*
