@@ -34,16 +34,12 @@ proctype proc(int i)
 }
 
 init {
+    int i = 0
     array[0] = true
-    run proc(0)
-    run proc(1)
-    run proc(2)
-    run proc(3)
-    run proc(4)
-    run proc(5)
-    run proc(6)
-    run proc(7)
-    run proc(8)
+    do
+    :: i < N -> proc(i); i++
+    :: else -> break
+    od
 }
 
 // ltl mutex { [] !(pc[0] == cs && pc[1] == cs) }
