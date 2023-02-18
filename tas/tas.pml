@@ -2,7 +2,6 @@
 
 mtype = {ss, ws, cs, fs};
 mtype pc[N] = ss;
-mtype pk = ss;
 bool locked = false;
 int cnt = N;
 
@@ -25,7 +24,6 @@ active [N] proctype proc()
         locked = false;
     }
     :: cnt == 0 ->
-        pk = fs;
         break;
     od
     assert(cnt == 0);

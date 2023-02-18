@@ -40,7 +40,7 @@ init {
     :: i < N ->
         run proc(i);
         i++;
-    :: else -> 
+    :: else ->
         break;
     od
 }
