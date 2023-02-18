@@ -32,6 +32,6 @@ active [N] proctype proc()
 // ltl mutex { [] !(pc[0] == cs && pc[1] == cs) }
 // ltl lofree { [] ((pc[1] == ws) -> (<> (pc[1] == cs))) }
 
-//　spins -o3 tas.pml
+// spins -o3 tas.pml
 // prom2lts-seq --por --ltl='[] ((pc\[0\] == "ws") -> (<> (pc\[0\] == "cs")))' tas.pml.spins
 // prom2lts-mc --strategy=cndfs --threads=2 --ltl='[] ((pc\[0\] == "ws") -> (<> (pc\[0\] == "cs")))' tas.pml.spins
