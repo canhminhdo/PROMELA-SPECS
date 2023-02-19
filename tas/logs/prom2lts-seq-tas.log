@@ -1,27 +1,26 @@
-prom2lts-seq --por --ltl='[] ((pc\[0\] == "ws") -> (<> (pc\[0\] == "cs")))' tas.pml.spins
+prom2lts-seq --por --proviso=color --strategy=scc --ltl='[] ((pc\[0\] == "ws") -> (<> (pc\[0\] == "cs")))' tas.pml.spins
 prom2lts-seq: Precompiled SpinS module initialized
 prom2lts-seq: Loading model from tas.pml.spins
-prom2lts-seq: Initializing POR dependencies: labels 107, guards 93
+prom2lts-seq: Initializing POR dependencies: labels 185, guards 171
 prom2lts-seq: LTL layer: formula: [] ((pc\[0\] == "ws") -> (<> (pc\[0\] == "cs")))
 prom2lts-seq: "[] ((pc\[0\] == "ws") -> (<> (pc\[0\] == "cs")))" is not a file, parsing as formula...
 prom2lts-seq: Using Spin LTL semantics
 prom2lts-seq: buchi has 2 states
 prom2lts-seq: Weak Buchi automaton detected, adding non-accepting as progress label.
-prom2lts-seq: Forcing the use of a cycle proviso. For best results use --proviso=color.
-prom2lts-seq: There are 109 state labels and 2 edge labels
-prom2lts-seq: State length is 43, there are 81 groups
+prom2lts-seq: There are 187 state labels and 2 edge labels
+prom2lts-seq: State length is 43, there are 159 groups
 prom2lts-seq: Running scc search strategy
 prom2lts-seq: Using a tree for state storage
-prom2lts-seq: Visible groups: 39 / 81, labels: 0 / 109
-prom2lts-seq: POR cycle proviso: stack (ltl)
-prom2lts-seq: explored 79 levels ~100000 states ~501071 transitions
-prom2lts-seq: explored 79 levels ~200000 states ~997397 transitions
-prom2lts-seq: explored 79 levels ~400000 states ~2144517 transitions
-prom2lts-seq: explored 79 levels ~800000 states ~4354964 transitions
-prom2lts-seq: explored 79 levels ~1600000 states ~9156893 transitions
-prom2lts-seq: explored 79 levels ~3200000 states ~19210714 transitions
-prom2lts-seq: explored 79 levels ~6400000 states ~38987140 transitions
+prom2lts-seq: Visible groups: 78 / 159, labels: 0 / 187
+prom2lts-seq: POR cycle proviso: color (ltl)
+prom2lts-seq: explored 79 levels ~100000 states ~502456 transitions
+prom2lts-seq: explored 79 levels ~200000 states ~998556 transitions
+prom2lts-seq: explored 79 levels ~400000 states ~2145539 transitions
+prom2lts-seq: explored 79 levels ~800000 states ~4356312 transitions
+prom2lts-seq: explored 79 levels ~1600000 states ~9158805 transitions
+prom2lts-seq: explored 79 levels ~3200000 states ~19212021 transitions
+prom2lts-seq: explored 79 levels ~6400000 states ~38988322 transitions
 prom2lts-seq: Empty product with LTL!
-prom2lts-seq: state space 79 levels, 11716794 states 77927863 transitions
+prom2lts-seq: state space 79 levels, 11716574 states 77927775 transitions
 
-Time: 4m 28s
+Time: 7m 39s
