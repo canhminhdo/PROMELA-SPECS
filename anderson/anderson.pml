@@ -49,6 +49,5 @@ init {
 // ltl lofree { [] ((pc[0] == ws) -> (<> (pc[0] == cs))) }
 
 // spins -o3 anderson.pml
-// prom2lts-seq --por --ltl='[] ((pc\[0\] == "ws") -> (<> (pc\[0\] == "cs")))' anderson.pml.spins
-// prom2lts-seq --por --proviso=color --strategy=dfs --ltl='[] ((pc\[0\] == "ws") -> (<> (pc\[0\] == "cs")))' anderson.pml.spins
+// prom2lts-seq --por --proviso=color --strategy=scc --ltl='[] ((pc\[0\] == "ws") -> (<> (pc\[0\] == "cs")))' anderson.pml.spins
 // prom2lts-mc --strategy=cndfs --threads=2 --ltl='[] ((pc\[0\] == "ws") -> (<> (pc\[0\] == "cs")))' anderson.pml.spins
