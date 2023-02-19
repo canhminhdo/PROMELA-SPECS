@@ -1,4 +1,4 @@
-prom2lts-seq --por --ltl='[] ((pc\[0\] == "ws") -> (<> (pc\[0\] == "cs")))' mcs.pml.spins
+prom2lts-seq --por --proviso=color --strategy=scc --ltl='[] ((pc\[0\] == "ws") -> (<> (pc\[0\] == "cs")))' mcs.pml.spins
 prom2lts-seq: Precompiled SpinS module initialized
 prom2lts-seq: Loading model from mcs.pml.spins
 prom2lts-seq: Initializing POR dependencies: labels 254, guards 247
@@ -7,13 +7,12 @@ prom2lts-seq: "[] ((pc\[0\] == "ws") -> (<> (pc\[0\] == "cs")))" is not a file, 
 prom2lts-seq: Using Spin LTL semantics
 prom2lts-seq: buchi has 2 states
 prom2lts-seq: Weak Buchi automaton detected, adding non-accepting as progress label.
-prom2lts-seq: Forcing the use of a cycle proviso. For best results use --proviso=color.
 prom2lts-seq: There are 256 state labels and 2 edge labels
 prom2lts-seq: State length is 40, there are 231 groups
 prom2lts-seq: Running scc search strategy
 prom2lts-seq: Using a tree for state storage
 prom2lts-seq: Visible groups: 156 / 231, labels: 0 / 256
-prom2lts-seq: POR cycle proviso: stack (ltl)
+prom2lts-seq: POR cycle proviso: color (ltl)
 prom2lts-seq: explored 79 levels ~100000 states ~342266 transitions
 prom2lts-seq: explored 83 levels ~200000 states ~663308 transitions
 prom2lts-seq: explored 83 levels ~400000 states ~1423495 transitions
@@ -25,4 +24,4 @@ prom2lts-seq: explored 87 levels ~12800000 states ~57188456 transitions
 prom2lts-seq: Empty product with LTL!
 prom2lts-seq: state space 87 levels, 24632599 states 112032267 transitions
 
-Time: 30m 53s
+Time: 30m 54s
