@@ -1,0 +1,34 @@
+prom2lts-seq --por --ltl='[] ((pc\[0\] == "ws") -> (<> (pc\[0\] == "cs")))' qlock.pml.spins
+prom2lts-seq: Precompiled SpinS module initialized
+prom2lts-seq: Loading model from qlock.pml.spins
+prom2lts-seq: Initializing POR dependencies: labels 164, guards 153
+prom2lts-seq: LTL layer: formula: [] ((pc\[0\] == "ws") -> (<> (pc\[0\] == "cs")))
+prom2lts-seq: "[] ((pc\[0\] == "ws") -> (<> (pc\[0\] == "cs")))" is not a file, parsing as formula...
+prom2lts-seq: Using Spin LTL semantics
+prom2lts-seq: buchi has 2 states
+prom2lts-seq: Weak Buchi automaton detected, adding non-accepting as progress label.
+prom2lts-seq: Forcing the use of a cycle proviso. For best results use --proviso=color.
+prom2lts-seq: There are 166 state labels and 2 edge labels
+prom2lts-seq: State length is 44, there are 133 groups
+prom2lts-seq: Running scc search strategy
+prom2lts-seq: Using a tree for state storage
+prom2lts-seq: Visible groups: 80 / 133, labels: 0 / 166
+prom2lts-seq: POR cycle proviso: stack (ltl)
+prom2lts-seq: explored 61 levels ~100000 states ~474033 transitions
+prom2lts-seq: explored 61 levels ~200000 states ~967657 transitions
+prom2lts-seq: explored 61 levels ~400000 states ~2040480 transitions
+prom2lts-seq: explored 61 levels ~800000 states ~4374044 transitions
+prom2lts-seq: explored 61 levels ~1600000 states ~8770102 transitions
+prom2lts-seq: explored 61 levels ~3200000 states ~18043166 transitions
+prom2lts-seq: explored 61 levels ~6400000 states ~38214453 transitions
+prom2lts-seq: explored 61 levels ~12800000 states ~78890201 transitions
+prom2lts-seq: explored 61 levels ~25600000 states ~161336391 transitions
+prom2lts-seq: explored 61 levels ~51200000 states ~327294755 transitions
+prom2lts-seq: explored 61 levels ~102400000 states ~688803374 transitions
+prom2lts-seq: explored 61 levels ~204800000 states ~1416731942 transitions
+prom2lts-seq: explored 61 levels ~409600000 states ~2885724714 transitions
+prom2lts-seq: explored 61 levels ~819200000 states ~5842827498 transitions
+prom2lts-seq(26724,0x10727ee00) malloc: can't allocate region
+:*** mach_vm_map(size=18446744065119617024, flags: 40000100) failed (error code=3)
+prom2lts-seq(26724,0x10727ee00) malloc: *** set a breakpoint in malloc_error_break to debug
+prom2lts-seq, ** error **: out of memory trying to resize to 18446744065119617024
