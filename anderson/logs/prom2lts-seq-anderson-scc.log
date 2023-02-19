@@ -1,0 +1,33 @@
+prom2lts-seq --por --ltl='[] ((pc\[0\] == "ws") -> (<> (pc\[0\] == "cs")))' anderson.pml.spins
+prom2lts-seq: Precompiled SpinS module initialized
+prom2lts-seq: Loading model from anderson.pml.spins
+prom2lts-seq: Initializing POR dependencies: labels 164, guards 154
+prom2lts-seq: LTL layer: formula: [] ((pc\[0\] == "ws") -> (<> (pc\[0\] == "cs")))
+prom2lts-seq: "[] ((pc\[0\] == "ws") -> (<> (pc\[0\] == "cs")))" is not a file, parsing as formula...
+prom2lts-seq: Using Spin LTL semantics
+prom2lts-seq: buchi has 2 states
+prom2lts-seq: Weak Buchi automaton detected, adding non-accepting as progress label.
+prom2lts-seq: Forcing the use of a cycle proviso. For best results use --proviso=color.
+prom2lts-seq: There are 166 state labels and 2 edge labels
+prom2lts-seq: State length is 60, there are 135 groups
+prom2lts-seq: Running scc search strategy
+prom2lts-seq: Using a tree for state storage
+prom2lts-seq: Visible groups: 54 / 135, labels: 0 / 166
+prom2lts-seq: POR cycle proviso: stack (ltl)
+prom2lts-seq: explored 85 levels ~100000 states ~319992 transitions
+prom2lts-seq: explored 85 levels ~200000 states ~640094 transitions
+prom2lts-seq: explored 85 levels ~400000 states ~1279701 transitions
+prom2lts-seq: explored 85 levels ~800000 states ~2558687 transitions
+prom2lts-seq: explored 85 levels ~1600000 states ~5113415 transitions
+prom2lts-seq: explored 85 levels ~3200000 states ~10226428 transitions
+prom2lts-seq: explored 85 levels ~6400000 states ~20451095 transitions
+prom2lts-seq: explored 85 levels ~12800000 states ~40875801 transitions
+prom2lts-seq: explored 85 levels ~25600000 states ~81748322 transitions
+prom2lts-seq: explored 85 levels ~51200000 states ~163472734 transitions
+prom2lts-seq: explored 85 levels ~102400000 states ~326739801 transitions
+prom2lts-seq: explored 85 levels ~204800000 states ~653437597 transitions
+prom2lts-seq: explored 85 levels ~409600000 states ~1306699224 transitions
+prom2lts-seq: Empty product with LTL!
+prom2lts-seq: state space 85 levels, 628461874 states 1995321565 transitions
+
+Time: 4h 47m 38s

@@ -1,0 +1,68 @@
+../spin -run mcs.pml                                                           ✔  16:50:55 
+ltl lofree: [] ((! ((pc[0]==ws))) || (<> ((pc[0]==cs))))
+Depth=     165 States=    1e+06 Transitions= 3.43e+06 Memory=   234.784	t=     1.33 R=   8e+05
+Depth=     165 States=    2e+06 Transitions= 7.59e+06 Memory=   338.300	t=     3.15 R=   6e+05
+Depth=     173 States=    3e+06 Transitions= 1.19e+07 Memory=   443.085	t=     4.92 R=   6e+05
+Depth=     173 States=    4e+06 Transitions= 1.59e+07 Memory=   546.601	t=     6.49 R=   6e+05
+Depth=     173 States=    5e+06 Transitions= 1.95e+07 Memory=   651.874	t=     7.92 R=   6e+05
+Depth=     173 States=    6e+06 Transitions= 2.39e+07 Memory=   753.046	t=     9.71 R=   6e+05
+Depth=     173 States=    7e+06 Transitions= 2.92e+07 Memory=   851.093	t=     11.9 R=   6e+05
+Depth=     173 States=    8e+06 Transitions= 3.36e+07 Memory=   952.362	t=     13.8 R=   6e+05
+Depth=     173 States=    9e+06 Transitions= 3.72e+07 Memory=  1057.733	t=     15.3 R=   6e+05
+Depth=     173 States=    1e+07 Transitions= 4.17e+07 Memory=  1160.858	t=     17.3 R=   6e+05
+Depth=     173 States=  1.1e+07 Transitions= 4.56e+07 Memory=  1264.179	t=       19 R=   6e+05
+Depth=     173 States=  1.2e+07 Transitions= 4.99e+07 Memory=  1365.155	t=     20.8 R=   6e+05
+Depth=     173 States=  1.3e+07 Transitions= 5.46e+07 Memory=  1465.351	t=     22.8 R=   6e+05
+Depth=     173 States=  1.4e+07 Transitions= 5.92e+07 Memory=  1565.937	t=     24.8 R=   6e+05
+Depth=     173 States=  1.5e+07 Transitions= 6.32e+07 Memory=  1668.085	t=     26.7 R=   6e+05
+Depth=     173 States=  1.6e+07 Transitions= 6.75e+07 Memory=  1771.210	t=     28.7 R=   6e+05
+Depth=     173 States=  1.7e+07 Transitions=  7.2e+07 Memory=  1870.722	t=     30.7 R=   6e+05
+Depth=     173 States=  1.8e+07 Transitions= 7.65e+07 Memory=  1971.112	t=     32.7 R=   6e+05
+Depth=     173 States=  1.9e+07 Transitions= 8.09e+07 Memory=  2071.112	t=     34.7 R=   5e+05
+Depth=     173 States=    2e+07 Transitions= 8.53e+07 Memory=  2172.675	t=     36.7 R=   5e+05
+Depth=     173 States=  2.1e+07 Transitions= 8.98e+07 Memory=  2272.480	t=     38.8 R=   5e+05
+Depth=     173 States=  2.2e+07 Transitions= 9.42e+07 Memory=  2372.480	t=     40.8 R=   5e+05
+Depth=     173 States=  2.3e+07 Transitions= 9.87e+07 Memory=  2471.894	t=     42.9 R=   5e+05
+Depth=     173 States=  2.4e+07 Transitions= 1.03e+08 Memory=  2572.089	t=     44.9 R=   5e+05
+Depth=     173 States=  2.5e+07 Transitions= 1.07e+08 Memory=  2683.612	t=       47 R=   5e+05
+Depth=     173 States=  2.6e+07 Transitions= 1.12e+08 Memory=  2798.065	t=       49 R=   5e+05
+Depth=     173 States=  2.7e+07 Transitions= 1.16e+08 Memory=  2905.292	t=     51.4 R=   5e+05
+Depth=     173 States=  2.8e+07 Transitions= 1.21e+08 Memory=  3008.124	t=     53.9 R=   5e+05
+Depth=     173 States=  2.9e+07 Transitions= 1.26e+08 Memory=  3110.370	t=     56.4 R=   5e+05
+Depth=     173 States=    3e+07 Transitions= 1.31e+08 Memory=  3212.714	t=     58.9 R=   5e+05
+Depth=     173 States=  3.1e+07 Transitions= 1.36e+08 Memory=  3313.983	t=     61.4 R=   5e+05
+
+(Spin Version 6.5.1 -- 3 November 2019)
+	+ Partial Order Reduction
+
+Full statespace search for:
+	never claim         	+ (lofree)
+	assertion violations	+ (if within scope of claim)
+	acceptance   cycles 	+ (fairness disabled)
+	invalid end states	- (disabled by never claim)
+
+State-vector 132 byte, depth reached 173, errors: 0
+ 28067847 states, stored (3.12302e+07 visited)
+1.0552382e+08 states, matched
+1.3675399e+08 transitions (= visited+matched)
+        0 atomic steps
+hash conflicts:  42925065 (resolved)
+
+Stats on memory usage (in Megabytes):
+ 4282.814	equivalent memory usage for states (stored*(State-vector + overhead))
+ 3211.172	actual memory usage for states (compression: 74.98%)
+         	state-vector as stored = 92 byte + 28 byte overhead
+  128.000	memory used for hash table (-w24)
+    0.534	memory used for DFS stack (-m10000)
+    1.408	memory lost to fragmentation
+ 3338.300	total actual memory usage
+
+
+unreached in proctype proc
+	(0 of 55 states)
+unreached in claim lofree
+	_spin_nvr.tmp:10, state 13, "-end-"
+	(1 of 13 states)
+
+pan: elapsed time 62 seconds
+pan: rate 503712.37 states/second

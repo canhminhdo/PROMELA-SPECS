@@ -98,4 +98,5 @@ active [N] proctype proc()
 
 // spins -o3 mcs.pml
 // prom2lts-seq --por --ltl='[] ((pc\[0\] == "ws") -> (<> (pc\[0\] == "cs")))' mcs.pml.spins
+// prom2lts-seq --por --proviso=color --strategy=dfs --ltl='[] ((pc\[0\] == "ws") -> (<> (pc\[0\] == "cs")))' mcs.pml.spins
 // prom2lts-mc --strategy=cndfs --threads=2 --ltl='[] ((pc\[0\] == "ws") -> (<> (pc\[0\] == "cs")))' mcs.pml.spins
