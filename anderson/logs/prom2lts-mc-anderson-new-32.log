@@ -1,0 +1,55 @@
+prom2lts-mc --strategy=cndfs --threads=32 --ltl='[] ((pc\[0\] == "ws") -> (<> (pc\[0\] == "cs")))' anderson-new.pml.spins
+prom2lts-mc: Precompiled SpinS module initialized
+prom2lts-mc( 0/32): Loading model from anderson-new.pml.spins
+prom2lts-mc(13/32): LTL layer: formula: [] ((pc\[0\] == "ws") -> (<> (pc\[0\] == "cs")))
+prom2lts-mc(13/32): "[] ((pc\[0\] == "ws") -> (<> (pc\[0\] == "cs")))" is not a file, parsing as formula...
+prom2lts-mc(13/32): Using Spin LTL semantics
+prom2lts-mc( 0/32): Weak Buchi automaton detected, adding non-accepting as progress label.
+prom2lts-mc( 0/32): There are 202 state labels and 2 edge labels
+prom2lts-mc( 0/32): State length is 49, there are 165 groups
+prom2lts-mc( 0/32): Running cndfs using 32 cores
+prom2lts-mc( 0/32): Using a tree table with 2^33 elements
+prom2lts-mc( 0/32): Successor permutation: dynamic
+prom2lts-mc( 0/32): Global bits: 2, count bits: 0, local bits: 0
+prom2lts-mc(14/32): [Blue] ~64 levels ~9600 states ~33248 transitions
+prom2lts-mc(14/32): [Blue] ~64 levels ~19200 states ~76448 transitions
+prom2lts-mc( 8/32): [Blue] ~64 levels ~38400 states ~155232 transitions
+prom2lts-mc( 8/32): [Blue] ~64 levels ~76800 states ~350272 transitions
+prom2lts-mc( 8/32): [Blue] ~64 levels ~153600 states ~754688 transitions
+prom2lts-mc( 8/32): [Blue] ~64 levels ~307200 states ~1666784 transitions
+prom2lts-mc( 6/32): [Blue] ~64 levels ~614400 states ~3533600 transitions
+prom2lts-mc( 8/32): [Blue] ~64 levels ~1228800 states ~7212448 transitions
+prom2lts-mc( 8/32): [Blue] ~64 levels ~2457600 states ~14570752 transitions
+prom2lts-mc( 8/32): [Blue] ~64 levels ~4915200 states ~29265152 transitions
+prom2lts-mc( 6/32): [Blue] ~64 levels ~9830400 states ~58722528 transitions
+prom2lts-mc( 6/32): [Blue] ~64 levels ~19660800 states ~117697824 transitions
+prom2lts-mc(25/32): [Blue] ~64 levels ~39321600 states ~235363424 transitions
+prom2lts-mc(29/32): [Blue] ~64 levels ~78643200 states ~470746944 transitions
+prom2lts-mc(25/32): [Blue] ~64 levels ~157286400 states ~941969568 transitions
+prom2lts-mc( 8/32): [Blue] ~64 levels ~314572800 states ~1883934368 transitions
+prom2lts-mc(15/32): [Blue] ~64 levels ~629145600 states ~3769333632 transitions
+prom2lts-mc( 6/32): [Blue] ~64 levels ~1258291200 states ~7539559040 transitions
+prom2lts-mc(24/32): [Blue] ~64 levels ~2516582400 states ~15086711008 transitions
+prom2lts-mc( 1/32): [Blue] ~64 levels ~5033164800 states ~30161065152 transitions
+prom2lts-mc( 7/32): Error: tree roots table full! Change -s/--ratio.
+prom2lts-mc( 0/32):
+prom2lts-mc( 0/32): Explored 8607939193 states 51546061863 transitions, fanout: 5.988
+prom2lts-mc( 0/32): Total exploration time 1524.590 sec (1524.590 sec minimum, 1524.590 sec on average)
+prom2lts-mc( 0/32): States per second: 5646068, Transitions per second: 33809788
+prom2lts-mc( 0/32):
+prom2lts-mc( 0/32): State space has 8588404543 states, 12044522 are accepting
+prom2lts-mc( 0/32): cndfs_1 (permutation: dynamic) stats:
+prom2lts-mc( 0/32): blue states: 8607939193 (100.23%), transitions: 0 (per worker)
+prom2lts-mc( 0/32): red states: 0 (0.00%), bogus: 0  (0.00%), transitions: 0, waits: 0 (0.00 sec)
+prom2lts-mc( 0/32): all-red states: 12044522 (0.14%), bogus 92913 (0.00%)
+prom2lts-mc( 0/32):
+prom2lts-mc( 0/32): Total memory used for local state coloring: 0.0MB
+prom2lts-mc( 0/32):
+prom2lts-mc( 0/32): Queue width: 8B, total height: 2048, memory: 0.02MB
+prom2lts-mc( 0/32): Tree memory: 65707.1MB, 8.0 B/state, compr.: 4.1%
+prom2lts-mc( 0/32): Tree fill ratio (roots/leafs): 99.0%/1.0%
+prom2lts-mc( 0/32): Stored 170 string chucks using 0MB
+prom2lts-mc( 0/32): Total memory used for chunk indexing: 0MB
+prom2lts-mc( 0/32): Est. total memory use: 65707.2MB (~65536.0MB paged-in)
+
+Time: 25m 39s
