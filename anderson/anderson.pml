@@ -7,24 +7,32 @@ bool array[N] = false;
 int next = 0;
 int cnt = N;
 
-proctype proc(int i)
+active [N] proctype proc()
 {
+    atomic {
+        if
+        :: _pid == 0 ->
+            array[_pid] = true;
+        :: else ->
+            skip;
+        fi
+    }
     do
 	:: atomic {
-        pc[i] == rs ->
-        pc[i] = ws;
-        place[i] = next;
+        pc[_pid] == rs ->
+        pc[_pid] = ws;
+        place[_pid] = next;
         next = (next + 1) % N;
     }
     :: atomic {
-        pc[i] == ws && array[place[i]] == true ->
-        pc[i] = cs;
+        pc[_pid] == ws && array[place[_pid]] == true ->
+        pc[_pid] = cs;
     }
     :: atomic {
-        pc[i] == cs ->
-        pc[i] = fs;
-        array[place[i]] = false;
-        array[(place[i] + 1) % N] = true;
+        pc[_pid] == cs ->
+        pc[_pid] = fs;
+        array[place[_pid]] = false;
+        array[(place[_pid] + 1) % N] = true;
         cnt--;
     }
     :: cnt == 0 ->
@@ -33,21 +41,10 @@ proctype proc(int i)
     assert(cnt == 0);
 }
 
-init {
-    int i = 0;
-    array[0] = true;
-    do
-    :: i < N ->
-        run proc(i);
-        i++;
-    :: else ->
-        break;
-    od
-}
-
 // ltl mutex { [] !(pc[0] == cs && pc[1] == cs) }
 // ltl lofree { [] ((pc[0] == ws) -> (<> (pc[0] == cs))) }
 
 // spins -o3 anderson.pml
-// prom2lts-seq --por --proviso=color --strategy=scc --ltl='[] ((pc\[0\] == "ws") -> (<> (pc\[0\] == "cs")))' anderson.pml.spins
-// prom2lts-mc --strategy=cndfs --threads=2 --ltl='[] ((pc\[0\] == "ws") -> (<> (pc\[0\] == "cs")))' anderson.pml.spins
+// prom2lts-seq --por --ltl='[] ((pc\[0\] == "ws") -> (<> (pc\[0\] == "cs")))' anderson.pml.spins
+// prom2lts-seq --por --proviso=color --strategy=dfs --ltl='[] ((pc\[0\] == "ws") -> (<> (pc\[0\] == "cs")))' anderson.pml.spins
+// prom2lts-mc --strategy=cndfs --threads=8 --ltl='[] ((pc\[0\] == "ws") -> (<> (pc\[0\] == "cs")))' anderson.pml.spins
