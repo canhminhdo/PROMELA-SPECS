@@ -1,0 +1,50 @@
+prom2lts-mc --strategy=ufscc --threads=16 --ltl='[] ((pc\[0\] == "ws") -> (<> (pc\[0\] == "cs")))' mcs.pml.spins
+prom2lts-mc: Precompiled SpinS module initialized
+prom2lts-mc( 0/16): Loading model from mcs.pml.spins
+prom2lts-mc( 6/16): LTL layer: formula: [] ((pc\[0\] == "ws") -> (<> (pc\[0\] == "cs")))
+prom2lts-mc( 6/16): "[] ((pc\[0\] == "ws") -> (<> (pc\[0\] == "cs")))" is not a file, parsing as formula...
+prom2lts-mc( 6/16): Using Spin LTL semantics
+prom2lts-mc( 0/16): Weak Buchi automaton detected, adding non-accepting as progress label.
+prom2lts-mc( 0/16): There are 256 state labels and 2 edge labels
+prom2lts-mc( 0/16): State length is 40, there are 231 groups
+prom2lts-mc( 0/16): Running ufscc using 16 cores
+prom2lts-mc( 0/16): Using a tree table with 2^33 elements
+prom2lts-mc( 0/16): Successor permutation: dynamic
+prom2lts-mc( 0/16): Global bits: 0, count bits: 0, local bits: 0
+prom2lts-mc( 2/16): ~69 levels ~9600 states ~34880 transitions
+prom2lts-mc( 0/16): ~79 levels ~19200 states ~74448 transitions
+prom2lts-mc( 2/16): ~73 levels ~38400 states ~149344 transitions
+prom2lts-mc( 2/16): ~75 levels ~76800 states ~297504 transitions
+prom2lts-mc( 2/16): ~77 levels ~153600 states ~595168 transitions
+prom2lts-mc(14/16): ~75 levels ~307200 states ~1152736 transitions
+prom2lts-mc( 6/16): ~79 levels ~614400 states ~2341856 transitions
+prom2lts-mc( 6/16): ~79 levels ~1228800 states ~4630800 transitions
+prom2lts-mc( 6/16): ~79 levels ~2457600 states ~9285728 transitions
+prom2lts-mc( 6/16): ~83 levels ~4915200 states ~18687072 transitions
+prom2lts-mc( 6/16): ~83 levels ~9830400 states ~37916192 transitions
+prom2lts-mc( 4/16): ~83 levels ~19660800 states ~85097472 transitions
+prom2lts-mc( 0/16):
+prom2lts-mc( 0/16): Empty product with LTL!
+prom2lts-mc( 0/16):
+prom2lts-mc( 0/16):
+prom2lts-mc( 0/16): total scc count:            28067847
+prom2lts-mc( 0/16): unique states count:        28067847
+prom2lts-mc( 0/16): unique transitions count:   127053375
+prom2lts-mc( 0/16): - self-loop count:          4056
+prom2lts-mc( 0/16): - claim dead count:         99071073
+prom2lts-mc( 0/16): - claim found count:        0
+prom2lts-mc( 0/16): - claim success count:      28116380
+prom2lts-mc( 0/16): - cum. max stack depth:     1336
+prom2lts-mc( 0/16):
+prom2lts-mc( 0/16): Explored 28116380 states 127307718 transitions, fanout: 4.528
+prom2lts-mc( 0/16): Total exploration time 17.490 sec (17.490 sec minimum, 17.490 sec on average)
+prom2lts-mc( 0/16): States per second: 1607569, Transitions per second: 7278886
+prom2lts-mc( 0/16):
+prom2lts-mc( 0/16): Queue width: 12B, total height: 0, memory: 0.00MB
+prom2lts-mc( 0/16): Tree memory: 305.7MB, 11.4 B/state, compr.: 7.0%
+prom2lts-mc( 0/16): Tree fill ratio (roots/leafs): 0.0%/0.0%
+prom2lts-mc( 0/16): Stored 246 string chucks using 0MB
+prom2lts-mc( 0/16): Total memory used for chunk indexing: 0MB
+prom2lts-mc( 0/16): Est. total memory use: 305.7MB (~65536.0MB paged-in)
+
+Time: 45s
