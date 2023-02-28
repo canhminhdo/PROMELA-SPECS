@@ -1,0 +1,4 @@
+red in QLOCK-CHECK : modelCheck(init9, lofree) .
+reduce in QLOCK-CHECK : modelCheck(init9, lofree) .
+rewrites: 25614874 in 4289605ms cpu (4290843ms real) (5971 rewrites/second)
+result Bool: true
