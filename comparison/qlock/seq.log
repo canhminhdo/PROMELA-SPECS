@@ -1,0 +1,26 @@
+Initialization: success
+ originModule: QLOCK-CHECK
+ reviseModule: QLOCK-CHECK-REVISE
+ initialState: init9
+ formula: lofree
+ eleSort: OComp
+ soupSort: Soup`{OComp`}
+
+Analyzer:
+	currentDepth: 4
+	depthList: 2 2
+	numberOfNodeSet: 81
+	numberOfStates: 3600
+	numberOfCxStates: 1464
+
+LayerCheck: success
+
+<=============== LastLayerCheck ===============>
+success
+LastCheck: success
+
+Bye.
+
+real	7m41.796s
+user	7m38.316s
+sys	0m3.495s

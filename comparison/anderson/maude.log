@@ -1,0 +1,3 @@
+reduce in ANDERSON-CHECK : modelCheck(init8, lofree) .
+rewrites: 26577526 in 1688724ms cpu (1689214ms real) (15738 rewrites/second)
+result Bool: true

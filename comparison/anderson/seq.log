@@ -1,0 +1,26 @@
+Initialization: success
+ originModule: ANDERSON-CHECK
+ reviseModule: ANDERSON-CHECK-REVISE
+ initialState: init8
+ formula: lofree
+ eleSort: OComp
+ soupSort: Soup`{OComp`}
+
+Analyzer:
+	currentDepth: 4
+	depthList: 2 2
+	numberOfNodeSet: 64
+	numberOfStates: 2072
+	numberOfCxStates: 931
+
+LayerCheck: success
+
+<=============== LastLayerCheck ===============>
+success
+LastCheck: success
+
+Bye.
+
+real	3m7.926s
+user	3m7.462s
+sys	0m0.464s
