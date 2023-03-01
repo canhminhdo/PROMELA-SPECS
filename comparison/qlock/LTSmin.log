@@ -1,0 +1,31 @@
+prom2lts-seq --por --proviso=color --strategy=scc --ltl='[] ((pc\[0\] == "ws") -> (<> (pc\[0\] == "cs")))' qlock.pml.spins
+prom2lts-seq: Precompiled SpinS module initialized
+prom2lts-seq: Loading model from qlock.pml.spins
+prom2lts-seq: Initializing POR dependencies: labels 148, guards 138
+prom2lts-seq: LTL layer: formula: [] ((pc\[0\] == "ws") -> (<> (pc\[0\] == "cs")))
+prom2lts-seq: "[] ((pc\[0\] == "ws") -> (<> (pc\[0\] == "cs")))" is not a file, parsing as formula...
+prom2lts-seq: Using Spin LTL semantics
+prom2lts-seq: buchi has 2 states
+prom2lts-seq: Weak Buchi automaton detected, adding non-accepting as progress label.
+prom2lts-seq: There are 150 state labels and 2 edge labels
+prom2lts-seq: State length is 40, there are 120 groups
+prom2lts-seq: Running scc search strategy
+prom2lts-seq: Using a tree for state storage
+prom2lts-seq: Visible groups: 72 / 120, labels: 0 / 150
+prom2lts-seq: POR cycle proviso: color (ltl)
+prom2lts-seq: explored 55 levels ~100000 states ~473906 transitions
+prom2lts-seq: explored 55 levels ~200000 states ~966895 transitions
+prom2lts-seq: explored 55 levels ~400000 states ~2040410 transitions
+prom2lts-seq: explored 55 levels ~800000 states ~4371549 transitions
+prom2lts-seq: explored 55 levels ~1600000 states ~8770241 transitions
+prom2lts-seq: explored 55 levels ~3200000 states ~18042396 transitions
+prom2lts-seq: explored 55 levels ~6400000 states ~38216632 transitions
+prom2lts-seq: explored 55 levels ~12800000 states ~78894707 transitions
+prom2lts-seq: explored 55 levels ~25600000 states ~161336333 transitions
+prom2lts-seq: explored 55 levels ~51200000 states ~327296144 transitions
+prom2lts-seq: explored 55 levels ~102400000 states ~688806033 transitions
+prom2lts-seq: explored 55 levels ~204800000 states ~1416733858 transitions
+prom2lts-seq: explored 55 levels ~409600000 states ~2885729174 transitions
+[1]    24773 killed     prom2lts-seq --por --proviso=color --strategy=scc  qlock.pml.spins
+
+Time: 4h 20m 33s
