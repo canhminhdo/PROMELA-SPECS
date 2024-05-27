@@ -1,0 +1,79 @@
+spin -run mcs.pml
+ltl halt: <> ((pc[0]==fs))
+Depth=     128 States=    1e+06 Transitions= 3.92e+06 Memory=   185.956	t=     1.18 R=   8e+05
+Depth=     128 States=    2e+06 Transitions= 8.25e+06 Memory=   243.183	t=     2.45 R=   8e+05
+Depth=     128 States=    3e+06 Transitions= 1.31e+07 Memory=   300.409	t=     3.86 R=   8e+05
+Depth=     136 States=    4e+06 Transitions= 1.73e+07 Memory=   357.636	t=     5.11 R=   8e+05
+Depth=     136 States=    5e+06 Transitions= 2.17e+07 Memory=   414.862	t=     6.39 R=   8e+05
+Depth=     136 States=    6e+06 Transitions= 2.61e+07 Memory=   472.187	t=     7.68 R=   8e+05
+Depth=     136 States=    7e+06 Transitions= 3.15e+07 Memory=   529.413	t=     9.22 R=   8e+05
+Depth=     136 States=    8e+06 Transitions= 3.63e+07 Memory=   586.640	t=     10.6 R=   8e+05
+Depth=     136 States=    9e+06 Transitions=  4.1e+07 Memory=   643.866	t=     12.1 R=   7e+05
+Depth=     136 States=    1e+07 Transitions= 4.52e+07 Memory=   701.093	t=     13.3 R=   7e+05
+Depth=     136 States=  1.1e+07 Transitions= 4.98e+07 Memory=   758.319	t=     14.8 R=   7e+05
+Depth=     136 States=  1.2e+07 Transitions= 5.41e+07 Memory=   815.644	t=     16.1 R=   7e+05
+Depth=     136 States=  1.3e+07 Transitions= 5.88e+07 Memory=   872.870	t=     17.5 R=   7e+05
+Depth=     136 States=  1.4e+07 Transitions= 6.38e+07 Memory=   930.097	t=     19.1 R=   7e+05
+Depth=     136 States=  1.5e+07 Transitions= 6.86e+07 Memory=   987.323	t=     20.5 R=   7e+05
+Depth=     136 States=  1.6e+07 Transitions= 7.34e+07 Memory=  1044.550	t=       22 R=   7e+05
+Depth=     136 States=  1.7e+07 Transitions= 7.77e+07 Memory=  1101.776	t=     23.4 R=   7e+05
+Depth=     136 States=  1.8e+07 Transitions=  8.2e+07 Memory=  1159.101	t=     24.8 R=   7e+05
+Depth=     136 States=  1.9e+07 Transitions= 8.69e+07 Memory=  1216.327	t=     26.3 R=   7e+05
+Depth=     136 States=    2e+07 Transitions= 9.17e+07 Memory=  1273.554	t=     27.8 R=   7e+05
+Depth=     136 States=  2.1e+07 Transitions= 9.63e+07 Memory=  1330.780	t=     29.2 R=   7e+05
+Depth=     136 States=  2.2e+07 Transitions= 1.01e+08 Memory=  1388.007	t=     30.7 R=   7e+05
+Depth=     136 States=  2.3e+07 Transitions= 1.05e+08 Memory=  1445.233	t=     32.1 R=   7e+05
+Depth=     136 States=  2.4e+07 Transitions=  1.1e+08 Memory=  1502.558	t=     33.6 R=   7e+05
+Depth=     136 States=  2.5e+07 Transitions= 1.15e+08 Memory=  1559.784	t=     35.2 R=   7e+05
+Depth=     136 States=  2.6e+07 Transitions=  1.2e+08 Memory=  1617.011	t=     36.7 R=   7e+05
+Depth=     136 States=  2.7e+07 Transitions= 1.24e+08 Memory=  1674.237	t=     38.1 R=   7e+05
+Depth=     136 States=  2.8e+07 Transitions= 1.29e+08 Memory=  1731.464	t=     39.5 R=   7e+05
+Depth=     136 States=  2.9e+07 Transitions= 1.34e+08 Memory=  1788.690	t=     41.1 R=   7e+05
+Depth=     136 States=    3e+07 Transitions= 1.38e+08 Memory=  1846.015	t=     42.3 R=   7e+05
+Depth=     136 States=  3.1e+07 Transitions= 1.41e+08 Memory=  1903.241	t=     43.4 R=   7e+05
+Depth=     136 States=  3.2e+07 Transitions= 1.45e+08 Memory=  1960.468	t=       45 R=   7e+05
+Depth=     136 States=  3.3e+07 Transitions=  1.5e+08 Memory=  2017.694	t=     46.6 R=   7e+05
+Depth=     136 States=  3.4e+07 Transitions= 1.55e+08 Memory=  2074.921	t=     48.3 R=   7e+05
+pan: resizing hashtable to -w26..  done
+Depth=     136 States=  3.5e+07 Transitions=  1.6e+08 Memory=  2628.230	t=     53.2 R=   7e+05
+Depth=     136 States=  3.6e+07 Transitions= 1.64e+08 Memory=  2685.456	t=     54.6 R=   7e+05
+Depth=     136 States=  3.7e+07 Transitions= 1.69e+08 Memory=  2742.683	t=     56.1 R=   7e+05
+Depth=     136 States=  3.8e+07 Transitions= 1.74e+08 Memory=  2799.909	t=     57.6 R=   7e+05
+
+(Spin Version 6.5.1 -- 3 November 2019)
+	+ Partial Order Reduction
+
+Full statespace search for:
+	never claim         	+ (halt)
+	assertion violations	+ (if within scope of claim)
+	acceptance   cycles 	+ (fairness disabled)
+	invalid end states	- (disabled by never claim)
+
+State-vector 132 byte, depth reached 136, errors: 0
+ 19037430 states, stored (3.80749e+07 visited)
+1.3632511e+08 states, matched
+1.7439997e+08 transitions (= visited+matched)
+        0 atomic steps
+hash conflicts:  39762783 (resolved)
+
+Stats on memory usage (in Megabytes):
+ 2904.881	equivalent memory usage for states (stored*(State-vector + overhead))
+ 2292.637	actual memory usage for states (compression: 78.92%)
+         	state-vector as stored = 98 byte + 28 byte overhead
+  512.000	memory used for hash table (-w26)
+    0.534	memory used for DFS stack (-m10000)
+ 2804.206	total actual memory usage
+
+
+unreached in proctype proc
+	mcs.pml:93, state 54, "assert((cnt==0))"
+	mcs.pml:94, state 55, "-end-"
+	(2 of 55 states)
+unreached in claim halt
+	_spin_nvr.tmp:6, state 6, "-end-"
+	(1 of 6 states)
+
+pan: elapsed time 57.7 seconds
+pan: rate 659990.64 states/second
+
+Time: 60s

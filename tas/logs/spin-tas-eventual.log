@@ -1,0 +1,52 @@
+spin -run tas.pml
+ltl halt: <> ((pc[0]==fs))
+Depth=      78 States=    1e+06 Transitions= 4.91e+06 Memory=   166.815	t=     1.12 R=   9e+05
+Depth=      78 States=    2e+06 Transitions=    1e+07 Memory=   204.999	t=     2.31 R=   9e+05
+Depth=      78 States=    3e+06 Transitions= 1.57e+07 Memory=   243.085	t=     3.62 R=   8e+05
+Depth=      78 States=    4e+06 Transitions= 2.18e+07 Memory=   281.269	t=     5.06 R=   8e+05
+Depth=      78 States=    5e+06 Transitions= 2.69e+07 Memory=   319.452	t=      6.3 R=   8e+05
+Depth=      78 States=    6e+06 Transitions= 3.23e+07 Memory=   357.538	t=      7.6 R=   8e+05
+Depth=      78 States=    7e+06 Transitions= 3.77e+07 Memory=   395.722	t=      8.9 R=   8e+05
+Depth=      78 States=    8e+06 Transitions= 4.37e+07 Memory=   433.905	t=     10.3 R=   8e+05
+Depth=      78 States=    9e+06 Transitions=    5e+07 Memory=   471.991	t=     11.8 R=   8e+05
+Depth=      78 States=    1e+07 Transitions= 5.62e+07 Memory=   510.175	t=     13.4 R=   7e+05
+Depth=      78 States=  1.1e+07 Transitions= 6.21e+07 Memory=   548.261	t=     14.8 R=   7e+05
+Depth=      78 States=  1.2e+07 Transitions= 6.88e+07 Memory=   586.444	t=     16.4 R=   7e+05
+
+(Spin Version 6.5.1 -- 3 November 2019)
+	+ Partial Order Reduction
+
+Full statespace search for:
+	never claim         	+ (halt)
+	assertion violations	+ (if within scope of claim)
+	acceptance   cycles 	+ (fairness disabled)
+	invalid end states	- (disabled by never claim)
+
+State-vector 132 byte, depth reached 78, errors: 0
+  6377292 states, stored (1.27546e+07 visited)
+ 61470010 states, matched
+ 74224594 transitions (= visited+matched)
+        0 atomic steps
+hash conflicts:  13592521 (resolved)
+
+Stats on memory usage (in Megabytes):
+  973.098	equivalent memory usage for states (stored*(State-vector + overhead))
+  486.813	actual memory usage for states (compression: 50.03%)
+         	state-vector as stored = 52 byte + 28 byte overhead
+  128.000	memory used for hash table (-w24)
+    0.534	memory used for DFS stack (-m10000)
+  615.253	total actual memory usage
+
+
+unreached in proctype proc
+	tas.pml:29, state 18, "assert((cnt==0))"
+	tas.pml:30, state 19, "-end-"
+	(2 of 19 states)
+unreached in claim halt
+	_spin_nvr.tmp:6, state 6, "-end-"
+	(1 of 6 states)
+
+pan: elapsed time 17.8 seconds
+pan: rate 716952.45 states/second
+
+Time: 20s

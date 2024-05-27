@@ -95,6 +95,7 @@ active [N] proctype proc()
 
 // ltl mutex { [] !(pc[0] == cs && pc[1] == cs) }
 // ltl lofree { [] ((pc[0] == ws) -> (<> (pc[0] == cs))) }
+// ltl halt { <> (pc[0] == fs) }
 
 // spins -o3 mcs.pml
 // prom2lts-seq --por --proviso=color --strategy=scc --ltl='[] ((pc\[0\] == "ws") -> (<> (pc\[0\] == "cs")))' mcs.pml.spins
