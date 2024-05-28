@@ -1,0 +1,27 @@
+prom2lts-seq --por --proviso=color --strategy=scc --ltl='<> (pc\[0\] == "fs")' anderson.pml.spins
+prom2lts-seq: Precompiled SpinS module initialized
+prom2lts-seq: Loading model from anderson.pml.spins
+prom2lts-seq: Initializing POR dependencies: labels 200, guards 190
+prom2lts-seq: LTL layer: formula: <> (pc\[0\] == "fs")
+prom2lts-seq: "<> (pc\[0\] == "fs")" is not a file, parsing as formula...
+prom2lts-seq: Using Spin LTL semantics
+prom2lts-seq: buchi has 1 states
+prom2lts-seq: Weak Buchi automaton detected, adding non-accepting as progress label.
+prom2lts-seq: There are 202 state labels and 2 edge labels
+prom2lts-seq: State length is 49, there are 163 groups
+prom2lts-seq: Running scc search strategy
+prom2lts-seq: Using a tree for state storage
+prom2lts-seq: Visible groups: 54 / 163, labels: 0 / 202
+prom2lts-seq: POR cycle proviso: color (ltl)
+prom2lts-seq: explored 37 levels ~100000 states ~239101 transitions
+prom2lts-seq: explored 37 levels ~200000 states ~456134 transitions
+prom2lts-seq: explored 37 levels ~400000 states ~998459 transitions
+prom2lts-seq: explored 37 levels ~800000 states ~1945626 transitions
+prom2lts-seq: explored 37 levels ~1600000 states ~3630860 transitions
+prom2lts-seq: explored 37 levels ~3200000 states ~7988091 transitions
+prom2lts-seq: explored 37 levels ~6400000 states ~15553643 transitions
+prom2lts-seq: explored 37 levels ~12800000 states ~29196373 transitions
+prom2lts-seq: Empty product with LTL!
+prom2lts-seq: state space 37 levels, 23536256 states 58394112 transitions
+
+Time: 6m 18s

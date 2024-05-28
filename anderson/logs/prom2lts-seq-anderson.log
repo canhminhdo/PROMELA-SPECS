@@ -29,3 +29,35 @@ prom2lts-seq: explored 64 levels ~409600000 states ~1715686000 transitions
 [1]    73142 killed     prom2lts-seq --por --proviso=color --strategy=scc  anderson-new.pml.spins
 
 Time: 6h:24m:4s
+
+prom2lts-seq --por --proviso=color --strategy=scc --ltl='[] ((pc\[0\] == "ws") -> (<> (pc\[0\] == "cs")))' anderson.pml.spins
+prom2lts-seq: Precompiled SpinS module initialized
+prom2lts-seq: Loading model from anderson.pml.spins
+prom2lts-seq: Initializing POR dependencies: labels 200, guards 190
+prom2lts-seq: LTL layer: formula: [] ((pc\[0\] == "ws") -> (<> (pc\[0\] == "cs")))
+prom2lts-seq: "[] ((pc\[0\] == "ws") -> (<> (pc\[0\] == "cs")))" is not a file, parsing as formula...
+prom2lts-seq: Using Spin LTL semantics
+prom2lts-seq: buchi has 2 states
+prom2lts-seq: Weak Buchi automaton detected, adding non-accepting as progress label.
+prom2lts-seq: There are 202 state labels and 2 edge labels
+prom2lts-seq: State length is 49, there are 165 groups
+prom2lts-seq: Running scc search strategy
+prom2lts-seq: Using a tree for state storage
+prom2lts-seq: Visible groups: 54 / 165, labels: 0 / 202
+prom2lts-seq: POR cycle proviso: color (ltl)
+prom2lts-seq: explored 64 levels ~100000 states ~417784 transitions
+prom2lts-seq: explored 64 levels ~200000 states ~837731 transitions
+prom2lts-seq: explored 64 levels ~400000 states ~1673839 transitions
+prom2lts-seq: explored 64 levels ~800000 states ~3347480 transitions
+prom2lts-seq: explored 64 levels ~1600000 states ~6698973 transitions
+prom2lts-seq: explored 64 levels ~3200000 states ~13397467 transitions
+prom2lts-seq: explored 64 levels ~6400000 states ~26810985 transitions
+prom2lts-seq: explored 64 levels ~12800000 states ~53617912 transitions
+prom2lts-seq: explored 64 levels ~25600000 states ~107231975 transitions
+prom2lts-seq: explored 64 levels ~51200000 states ~214491483 transitions
+prom2lts-seq: explored 64 levels ~102400000 states ~428918786 transitions
+prom2lts-seq: explored 64 levels ~204800000 states ~857837809 transitions
+prom2lts-seq: explored 64 levels ~409600000 states ~1715686000 transitions
+[1]    8154 killed     prom2lts-seq --por --proviso=color --strategy=scc  anderson.pml.spins
+
+Killed after 6h 45m 33s
